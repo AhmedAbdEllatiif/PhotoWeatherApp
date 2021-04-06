@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/chooseImageFragment">
+
+    <fragment
+        android:id="@+id/chooseImageFragment"
+        android:name="com.ahmed.weatherapptask.Fragments.ChooseImageFragment"
+        android:label="fragment_choose_image"
+        tools:layout="@layout/fragment_choose_image" >
+        <action
+            android:id="@+id/action_chooseImageFragment_to_shareImageFragment"
+            app:destination="@id/shareImageFragment" />
+        <action
+            android:id="@+id/action_chooseImageFragment_to_savedImagesFragment2"
+            app:destination="@id/savedImagesFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/shareImageFragment"
+        android:name="com.ahmed.weatherapptask.Fragments.ShareImageFragment"
+        android:label="fragment_share_image"
+        tools:layout="@layout/fragment_share_image" />
+    <fragment
+        android:id="@+id/savedImagesFragment"
+        android:name="com.ahmed.weatherapptask.Fragments.SavedImagesFragment"
+        android:label="fragment_saved_images"
+        tools:layout="@layout/fragment_saved_images" >
+        <action
+            android:id="@+id/action_savedImagesFragment_to_fullSizeImageFragment"
+            app:destination="@id/fullSizeImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullSizeImageFragment"
+        android:name="com.ahmed.weatherapptask.Fragments.FullSizeImageFragment"
+        android:label="fragment_full_size_image"
+        tools:layout="@layout/fragment_full_size_image" />
+</navigation>
